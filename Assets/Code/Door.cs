@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+
+    public int doorCode = 0;
     public bool locked = false;
+
+    public string levelToLoad = "Level1";
 
     private void OnTriggerEnter(Collider other) 
     {
@@ -13,15 +17,13 @@ public class Door : MonoBehaviour
         {
             if(!locked)
             {
-                SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("levelToLoad");
 
             }
-            else 
-            {
-                if(PublicVars.keys > 0) 
+            else if(PublicVars.hasKey[doorCode]) 
                 {
-                    PublicVars.keys--;
-                    SceneManager.LoadScene("Win");
+                    PublicVars.hasKey[doorCode] = false;
+                    SceneManager.LoadScene("levelToLoad");
                 }
             }
         }

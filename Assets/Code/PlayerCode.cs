@@ -39,10 +39,14 @@ public class PlayerCode : MonoBehaviour
 
      private void OnTriggerEnter(Collider other) 
      {
-        if (other.CompareTag("Key"))
+        
+        for (int i = 0; i < PublicVars.hasKey.Length; i++)
         {
-            Destroy(other.gameObject);
-            PublicVars.keys++;
+            if (other.gameObject.CompareTag("Key" + i))
+            {
+                Destroy(other.gameObject);
+                PublicVars.hasKey[i] = true;
+            }
         }
      }
 }
