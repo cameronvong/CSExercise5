@@ -26,8 +26,12 @@ public class BotCode : MonoBehaviour
             _agent.SetDestination(player.transform.position);
         }
     }
-    void Update()
-    {
-        
+    
+    private void OnTriggerEnter(Collider other) {
+        print("Collided");
+        if(other.CompareTag("Bullet")) {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

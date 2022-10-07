@@ -5,8 +5,11 @@ using UnityEngine.AI;
 
 public class PlayerCode : MonoBehaviour
 {
+    int bulletForce = 500;
     NavMeshAgent _agent;
     Camera mainCam;
+
+    public GameObject Bullet;
 
     void Start() 
     {
@@ -31,8 +34,8 @@ public class PlayerCode : MonoBehaviour
             {
                 transform.LookAt(hit.point);
 
-                //GameObject newBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                // newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce)
+                GameObject newBullet = Instantiate(Bullet, transform.position, transform.rotation);
+                newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce);
             }
         }
     }
