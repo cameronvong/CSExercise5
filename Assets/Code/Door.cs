@@ -17,13 +17,13 @@ public class Door : MonoBehaviour
         {
             if(!locked)
             {
-                SceneManager.LoadScene("levelToLoad");
+                SceneManager.LoadScene(levelToLoad);
 
             }
-            else if(PublicVars.hasKey[doorCode]) 
+            else if(PublicVars.hasKey[doorCode]) {
                 {
                     PublicVars.hasKey[doorCode] = false;
-                    SceneManager.LoadScene("levelToLoad");
+                    SceneManager.LoadScene(levelToLoad);
                 }
             }
         }
