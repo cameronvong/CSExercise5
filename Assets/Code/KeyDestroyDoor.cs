@@ -12,7 +12,6 @@ public class KeyDestroyDoor : MonoBehaviour
     
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Player")) {
-            print("This ran");
         Destroy(door);
         Destroy(gameObject);
         Vector3 position = new Vector3(posx, 1, posz);
