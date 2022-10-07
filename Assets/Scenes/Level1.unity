@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 407828592}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -7.5, y: 2.75, z: 0}
-  m_LocalScale: {x: 0.5, y: 5, z: 15}
+  m_LocalScale: {x: 0.5, y: 5, z: 14.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1804192607}
@@ -1351,6 +1351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 710509256}
+  posx: 0
+  posz: 0
+  enemy: {fileID: 0}
 --- !u!1001 &6634540935076290597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,6 +1409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golden Key
       objectReference: {fileID: 0}
+    - target: {fileID: 6634540935360203402, guid: 29750e1da5c645845aba0a6fc73edbe0, type: 3}
+      propertyPath: level
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29750e1da5c645845aba0a6fc73edbe0, type: 3}
 --- !u!114 &7669194995046981521
@@ -1421,6 +1428,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 648068069}
+  posx: 0
+  posz: 0
+  enemy: {fileID: 0}
 --- !u!1001 &8105731870613804245
 PrefabInstance:
   m_ObjectHideFlags: 0
