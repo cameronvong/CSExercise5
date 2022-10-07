@@ -42,7 +42,7 @@ public class PlayerCode : MonoBehaviour
 
      private void OnTriggerEnter(Collider other) 
      {
-        
+        print("this ran");
         for (int i = 0; i < PublicVars.hasKey.Length; i++)
         {
             if (other.gameObject.CompareTag("Key" + i))
